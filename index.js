@@ -10,6 +10,9 @@ app.get("/", (req, res) => {
 app.get("/users", (req, res) => {
   res.json({ message: "users list", data: { users: [] } });
 });
+app.get("/products", (req, res) => {
+  res.json({ message: "products list", data: { products: [] } });
+});
 
 mongoose
   .connect(
