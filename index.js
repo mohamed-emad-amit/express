@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
   res.send("HELLO FROM EXPRESS");
 });
 
+app.get("/users", (req, res) => {
+  res.json({ message: "users list", data: { users: [] } });
+});
+
 mongoose
   .connect(
     "mongodb+srv://dadyishome94_db_user:1mDUrlo9wOFy7eTu@cluster0.qtaprfn.mongodb.net/"
